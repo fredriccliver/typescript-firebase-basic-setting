@@ -10,19 +10,44 @@
 > tsc -w --project ./functions/tsconfig.json
 ```
 
-![ScreenShot](sc-commands.png)
-![ScreenShot](sc-executed-commands.png)
+![ScreenShot](screenshots/commands.png)
+![ScreenShot](screenshots/executed-commands.png)
 
 ## Connect with VSCode debugger
 
+### Functions-side (for back-end typescript)
+
 Attach
-![ScreenShot](sc-attach.png)
+![ScreenShot](screenshots/attach.png)
 
 9229 is default port for functions remote debugging
-![ScreenShot](sc-9299.png)
+![ScreenShot](screenshots/9299.png)
 
 You can mark a breakpoint in VSCode
-![ScreenShot](sc-debugger.png)
+![ScreenShot](screenshots/debugger.png)
+
+### Hosting-side (for frond-end typescript)
+
+Define new launch configuration into launch.json
+![ScreenShot](screenshots/launch-setting.png)
+
+```
+{
+  "configurations": [
+
+    {
+      "name": "Launch Chrome",
+      "request": "launch",
+      "type": "pwa-chrome",
+      "url": "http://localhost:5000",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
+```
+
+You're able to mark a breakpoint in VSCode
+![ScreenShot](screenshots/frontend-breakpoint.png)
 
 
 ## You have to prepare these files
@@ -43,7 +68,7 @@ export const firebaseConfig = {
 };
 ```
 
-Only this basic configuration was defined in. 
+Only this basic configuration was defined in.
 
 ### .firebaserc
 
