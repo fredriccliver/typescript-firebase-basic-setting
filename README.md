@@ -49,7 +49,6 @@ Define new launch configuration into launch.json
 You're able to mark a breakpoint in VSCode
 ![ScreenShot](screenshots/frontend-breakpoint.png)
 
-
 ## You have to prepare these files
 
 I ignored these files from github repo.
@@ -74,3 +73,8 @@ Only this basic configuration was defined in.
 
 Make this with the firebase init command.
 But firebase.json file also would be overrided. So you should override again as same as with this repo's one.
+
+## Video recoding.
+
+Video recoding is here.
+[![Typescript debugging in hosting and functions side within firebase](./screenshots/video-thumb.png)](https://www.youtube.com/watch?v=K5bgHsTLopE)
