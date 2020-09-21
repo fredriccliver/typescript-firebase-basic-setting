@@ -1,15 +1,51 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 Using Typescript in both side of Hosting and Functions
 
-This project has been created using **webpack scaffold**, you can now run
+## Start emulator and typescript transpiler with watch option
 
-```
-npm run build
-```
+```bash
+> webpack
 
-or
+> firebase emulators:start --inspect-functions
 
-```
-yarn build
+> tsc -w --project ./functions/tsconfig.json
 ```
 
-to bundle your application
+![ScreenShot](sc-commands.png)
+![ScreenShot](sc-executed-commands.png)
+
+## Connect with VSCode debugger
+
+Attach
+![ScreenShot](sc-attach.png)
+
+9229 is default port for functions remote debugging
+![ScreenShot](sc-9299.png)
+
+You can mark a breakpoint in VSCode
+![ScreenShot](sc-debugger.png)
+
+
+## You have to prepare these files
+
+I ignored these files from github repo.
+
+### firebaseInit.ts
+
+```
+export const firebaseConfig = {
+  apiKey: --,
+  authDomain: --,
+  databaseURL: --,
+  projectId: --,
+  storageBucket: --,
+  messagingSenderId: --,
+  appId: --
+};
+```
+
+Only this basic configuration was defined in. 
+
+### .firebaserc
+
+Make this with the firebase init command.
+But firebase.json file also would be overrided. So you should override again as same as with this repo's one.
